@@ -1,11 +1,13 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import PresetList from '../components/PresetList';
+import TagsFilter from '../components/TagsFilter';
 
 export default function PresetsPage({ data }) {
   const presets = data.presets.nodes;
   return (
     <>
+      <TagsFilter />
       <PresetList presets={presets} />
     </>
   );
