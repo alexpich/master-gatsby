@@ -21,6 +21,20 @@ export default {
       description: 'Applies a faded film look.',
       options: { layout: 'checkbox' },
     },
+    {
+      name: 'vibrant',
+      title: 'Vibrant',
+      type: 'boolean',
+      description: 'Vibrant colors.',
+      options: { layout: 'checkbox' },
+    },
+    {
+      name: 'grain',
+      title: 'Grain',
+      type: 'boolean',
+      description: 'The grainy-look of vintage magazines.',
+      options: { layout: 'checkbox' },
+    },
   ],
   preview: {
     select: {
