@@ -1,4 +1,5 @@
 import { MdCamera as icon } from 'react-icons/md';
+import PriceInput from '../components/PriceInput';
 
 export default {
   // Computer Name
@@ -35,9 +36,9 @@ export default {
       name: 'price',
       title: 'Price',
       type: 'number',
+      inputComponent: PriceInput,
       description: 'Price of the preset in cents.',
       validation: (Rule) => Rule.min(200).max(100000),
-      // TODO: Add custom input component
     },
     {
       name: 'tags',

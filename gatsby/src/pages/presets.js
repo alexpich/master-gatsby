@@ -1,10 +1,40 @@
 import React from 'react';
-import Layout from '../components/Layout';
+import { graphql } from 'gatsby';
+import PresetList from '../components/PresetList';
 
-export default function PresetsPage() {
+export default function PresetsPage({ data }) {
+  const presets = data.presets.nodes;
   return (
     <>
-      <p>Presets Page</p>
+      <PresetList presets={presets} />
     </>
   );
 }
+
+export const query = graphql`
+  query {
+    presets: allSanityPreset {
+      nodes {
+        name
+        id
+        slug {
+          current
+        }
+        tags {
+          id
+          name
+        }
+        image {
+          asset {
+            fixed(width: 300, height: 200) {
+              ...GatsbySanityImageFixed
+            }
+            fluid(maxWidth: 400) {
+              ...GatsbySanityImageFluid
+            }
+          }
+        }
+      }
+    }
+  }
+`;
