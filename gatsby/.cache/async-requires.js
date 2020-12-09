@@ -7,6 +7,7 @@ exports.components = {
   "component---src-pages-about-js": () => import("./../../../src/pages/about.js" /* webpackChunkName: "component---src-pages-about-js" */),
   "component---src-pages-index-js": () => import("./../../../src/pages/index.js" /* webpackChunkName: "component---src-pages-index-js" */),
   "component---src-pages-order-js": () => import("./../../../src/pages/order.js" /* webpackChunkName: "component---src-pages-order-js" */),
-  "component---src-pages-presets-js": () => import("./../../../src/pages/presets.js" /* webpackChunkName: "component---src-pages-presets-js" */)
+  "component---src-pages-presets-js": () => import("./../../../src/pages/presets.js" /* webpackChunkName: "component---src-pages-presets-js" */),
+  "component---src-templates-preset-js": () => import("./../../../src/templates/Preset.js" /* webpackChunkName: "component---src-templates-preset-js" */)
 }
 

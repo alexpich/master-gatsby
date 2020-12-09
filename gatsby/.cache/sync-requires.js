@@ -10,6 +10,7 @@ exports.components = {
   "component---src-pages-about-js": hot(preferDefault(require("/Users/alexpich/Desktop/Code/master-gatsby-scratch/gatsby/src/pages/about.js"))),
   "component---src-pages-index-js": hot(preferDefault(require("/Users/alexpich/Desktop/Code/master-gatsby-scratch/gatsby/src/pages/index.js"))),
   "component---src-pages-order-js": hot(preferDefault(require("/Users/alexpich/Desktop/Code/master-gatsby-scratch/gatsby/src/pages/order.js"))),
-  "component---src-pages-presets-js": hot(preferDefault(require("/Users/alexpich/Desktop/Code/master-gatsby-scratch/gatsby/src/pages/presets.js")))
+  "component---src-pages-presets-js": hot(preferDefault(require("/Users/alexpich/Desktop/Code/master-gatsby-scratch/gatsby/src/pages/presets.js"))),
+  "component---src-templates-preset-js": hot(preferDefault(require("/Users/alexpich/Desktop/Code/master-gatsby-scratch/gatsby/src/templates/Preset.js")))
 }
 
