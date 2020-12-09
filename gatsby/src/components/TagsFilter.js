@@ -62,12 +62,6 @@ export default function TagsFilter() {
 
   const { tags, presets } = useStaticQuery(graphql`
     query {
-      tags: allSanityTag {
-        nodes {
-          name
-          id
-        }
-      }
       presets: allSanityPreset {
         nodes {
           tags {
