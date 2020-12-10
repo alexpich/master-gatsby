@@ -3,19 +3,21 @@ import { graphql } from 'gatsby';
 import PresetList from '../components/PresetList';
 import TagsFilter from '../components/TagsFilter';
 
-export default function PresetsPage({ data }) {
+export default function PresetsPage({ data, pageContext }) {
   const presets = data.presets.nodes;
   return (
     <>
-      <TagsFilter />
+      <TagsFilter activeTag={pageContext.tag} />
       <PresetList presets={presets} />
     </>
   );
 }
 
 export const query = graphql`
-  query {
-    presets: allSanityPreset {
+  query PresetQuery($tag: [String]) {
+    presets: allSanityPreset(
+      filter: { tags: { elemMatch: { name: { in: $tag } } } }
+    ) {
       nodes {
         name
         id

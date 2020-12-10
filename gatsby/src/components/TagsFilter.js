@@ -20,9 +20,13 @@ const TagsStyles = styled.div`
       background: white;
       padding: 2px 5px;
     }
-    .active {
+    &[aria-current='page'] {
       background: var(--black);
       color: white;
+      .count {
+        background: var(--white);
+        color: black;
+      }
     }
   }
 `;
@@ -56,7 +60,7 @@ function countPresetsInTags(presets) {
   return sortedTags;
 }
 
-export default function TagsFilter() {
+export default function TagsFilter({ activeTag }) {
   // Get a list of all the tags
   // Get a list of all the presets with their tags
 
@@ -72,15 +76,17 @@ export default function TagsFilter() {
       }
     }
   `);
-  console.clear();
 
   // Count how many presets are in each tag
   const tagsWithCounts = countPresetsInTags(presets.nodes);
-  console.log(tagsWithCounts);
 
   // Loop over the list of tags and display the tag and count of presets in that tag
   return (
     <TagsStyles>
+      <Link to="/presets">
+        <span className="name">All</span>
+        <span className="count">{presets.nodes.length}</span>
+      </Link>
       {tagsWithCounts.map((tag) => (
         <Link to={`/tag/${tag.name}`} key={tag.id}>
           <span className="name">{tag.name}</span>
